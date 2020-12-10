@@ -12,3 +12,9 @@ Similarly, each binary executable needs to generate .asm file and .byte file at 
 Inputs are the same as training phase. That is, binary executable(PE), .asm file, and .byte file
 Output format: Dataframe
 
+## result showing
+### single result
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_single.png)
+### multiple results
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_high_classify.png)
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_low_classify.JPG)
