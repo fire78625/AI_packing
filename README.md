@@ -1,4 +1,4 @@
-# AI_packing
+# AI_ransomware_classification
 record about the performance of our proposed AI model in ransomware classification and the other needed details
 
 ## Training phase
@@ -10,5 +10,5 @@ The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), 
 ## Testing phase
 Similarly, each binary executable needs to generate .asm file and .byte file at first.
 Inputs are the same as training phase. That is, binary executable(PE), .asm file, and .byte file
-Output format: ndarray (1 x 10)
+Output format: Dataframe
 
