@@ -5,7 +5,7 @@ Moreover, showing how we applied it to classify ransomware samples with our own 
 
 Authors: Owen Chen, Ping-Chung Chen, Chih-Wei Chen
 
-source category:
+Source category:
 
 (1) Source code of training and testing (/source_code)
 
@@ -16,6 +16,7 @@ source category:
 ## Introduction
 
 The original model attends the AI competition whose name is "2019 SecBuzzer AI UP! AI Information Security Challenge" which was hold by III
+![](https://competition.secbuzzer.co/)
 
 The evaluation standard of competition is the accuracy of classification, and our model holds at least 50% accuracy to each category of malware
 
@@ -125,7 +126,8 @@ You can check by open example.ipynb and execute the first 4 cell to confirm that
 
 ### single result
 
-The left column list the names of category, the right column are the values of possibility of prediction. The largest value is the prediction result 
+The left column list the names of category, the right column are the values of possibility of prediction. The largest value is the prediction result
+
 ![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_single.png)
 ### multiple results
 
