@@ -14,6 +14,39 @@ source category:
 
 ## Introduction
 
+The original model attends the AI competition whose name is "2019 SecBuzzer AI UP! AI Information Security Challenge" which was hold by III
+
+Its evaluation standard is the accuracy of classification
+
+### Analysis process
+
+Use feature extracting techniques: Select Hex code, Op Code, and Hex image to extract features
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/malware_analysis.JPG)
+
+(1) Hex code
+
+Find features from Hex file, and use model to find relation between features and functions
+~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/hex_code_analysis.JPG)
+
+(2) OpCode
+
+Using IDA Pro to convert the .asm file of OpCode, then use keywords analysis to transfer Opcodes to Vector
+~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/opcode_analysis.JPG)
+
+(3) Hex image
+
+Transfer Hex code into gray image, then use Fourier transform to describe better features of image
+~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/hex_code_analysis.JPG)
+
+### Diagram of model
+
+Using stacking model to training and testing, then merging the results of different models to balance result
+~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/stack_model.JPG)
+
+### Experimental result
+
+Accuracy > 50%
+~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/accuracy.JPG)
 
 ## Training phase
 First, each original binary executable in training set needs to use tools or commands to generate 2 category files: .asm file and .byte file
@@ -25,6 +58,7 @@ The outputs of training phase are 5 models whose file format is .pickle
 The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), Pytorch, stack
 
 ###Training steps:
+
 (1) Feature generate stage
     Using .ipynb to generate a file which record the extracted features of binary files. First parameter should be filename(without extname) and 
 ## Testing phase
