@@ -17,7 +17,7 @@ source category:
 
 The original model attends the AI competition whose name is "2019 SecBuzzer AI UP! AI Information Security Challenge" which was hold by III
 
-Its evaluation standard is the accuracy of classification
+The evaluation standard of competition is the accuracy of classification, and our model holds at least 50% accuracy to each category of malware
 
 ### Analysis process
 
@@ -46,8 +46,36 @@ Using stacking model to training and testing, then merging the results of differ
 
 ### Experimental result
 
-Accuracy > 50%
+Accuracy > 50% in each category of malware
 ![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/accuracy.JPG)
+
+## Application
+
+We try to apply model to the classification of ransomware
+
+We manually classify the ransomware into 10 categories according to the names from Kaspersky
+
+### Categories name
+
+Trojan-Ransom.Win32.Blocker.xxx
+
+Trojan-Ransom.Win32.GandCrypt.xxx
+
+Trojan-Ransom.Win32.Foreign.xxx
+
+Trojan-Ransom.Win32.PornoBlocker.xxx
+
+Trojan-Ransom.Win32.Wanna.xxx
+
+HEUR:Trojan-Ransom.xxx.Blocker.gen
+
+HEUR:Trojan-Ransom.xxx.Gen.gen
+
+Trojan-Ransom.PHP.xxx
+
+HEUR:Trojan-Ransom.Win32.xxx.vho
+
+Others
 
 ## Training phase
 First, each original binary executable in training set needs to use tools or commands to generate 2 category files: .asm file and .byte file
@@ -58,7 +86,7 @@ The outputs of training phase are 5 models whose file format is .pickle
 
 The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), Pytorch, stack
 
-###Training steps:
+### Training steps:
 
 (1) Feature generate stage
     Using .ipynb to generate a file which record the extracted features of binary files. First parameter should be filename(without extname) and 
