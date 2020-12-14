@@ -89,10 +89,12 @@ The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), 
 ### Training steps:
 
 (1) Feature generate stage [File format: csv]
-    Using .ipynb to generate a file which record the extracted features of binary files. First parameter of sample should be filename(without extname) and the others are the extracted features in order. [Inputs are binary executable, .asm file, and .byte file. Output is a csv file.]
+
+Using .ipynb to generate a file which record the extracted features of binary files. First parameter of sample should be filename(without extname) and the others are the extracted features in order. [Inputs are binary executable, .asm file, and .byte file. Output is a csv file.]
     
 (2) Label generate stage [File format: csv]
-    Using .py to generate a file which record the filename and its label. First parameter is filename, and second is label. [Input is binary executable, and output is a csv file]
+
+Using .py to generate a file which record the filename and its label. First parameter is filename, and second is label. [Input is binary executable, and output is a csv file]
 
 (3) Open model_training.ipynb and execute the cells (from 1st to 8th) by order then you can acquire the 5 output models in specific path that you have written. [Inputs are the 2 csv file, and the outputs are 5 models]
 ## Testing phase
