@@ -55,7 +55,7 @@ We try to apply model to the classification of ransomware
 
 We manually classify the ransomware into 10 categories according to the names from Kaspersky
 
-### Categories name
+### Categories
 
 Trojan-Ransom.Win32.Blocker.xxx
 
@@ -88,14 +88,23 @@ The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), 
 
 ### Training steps:
 
-(1) Feature generate stage
-    Using .ipynb to generate a file which record the extracted features of binary files. First parameter should be filename(without extname) and 
+(1) Feature generate stage [File format: csv]
+    Using .ipynb to generate a file which record the extracted features of binary files. First parameter of sample should be filename(without extname) and the others are the extracted features in order. [Inputs are binary executable, .asm file, and .byte file. Output is a csv file.]
+    
+(2) Label generate stage [File format: csv]
+    Using .py to generate a file which record the filename and its label. First parameter is filename, and second is label. [Input is binary executable, and output is a csv file]
+
+(3) Open model_training.ipynb and execute the cells (from 1st to 8th) by order then you can acquire the 5 output models in specific path that you have written. [Inputs are the 2 csv file, and the outputs are 5 models]
 ## Testing phase
 Similarly, each binary executable needs to generate .asm file and .byte file at first.
 
 Inputs are the same as training phase. That is, binary executable(PE), .asm file, and .byte file
 
 Output format: Dataframe
+
+### Testing steps:
+
+Using .ipynb to generate testing result. [Inputs are binary executable, .asm file, and .byte file. Output is a dataframe]
 
 ## Result showing
 
