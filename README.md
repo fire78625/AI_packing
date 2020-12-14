@@ -124,8 +124,16 @@ Using .ipynb to generate testing result. [Inputs are binary executable, .asm fil
 You can check by open example.ipynb and execute the first 4 cell to confirm that do confilcts exist or not 
 
 ### single result
+
+The left column list the names of category, the right column are the values of possibility of prediction. The largest value is the prediction result 
 ![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_single.png)
 ### multiple results
+
+(1) High, low: High entropy dataset and low entropy dataset
+
+(2) Success, Fail: The amount of prediction correct/incorrect
+
+(3) X%(Y) : The amounts(Y) of prediction results of samples are larger than X
 ![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_high_classify.png)
 
 ![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_low_classify.JPG)
