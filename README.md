@@ -1,12 +1,19 @@
-# AI_ransomware_classification
-Record about the performance of our proposed AI model in ransomware classification and the other needed details
+# PE_malware - AI_ransomware_classification
+Introduce the cencept of our model which was used to attend the AI competition and won 2nd place
+
+Moreover, showing how we applied it to classify ransomware samples with our own defined categories and the results 
 
 Authors: Owen Chen, Ping-Chung Chen, Chih-Wei Chen
 
 source category:
 (1) Source code of training and testing (/source_code)
+
 (2) Example samples for testing (/testsample)
+
 (3) Figures of execution results (/result_showing)
+
+## Introduction
+
 
 ## Training phase
 First, each original binary executable in training set needs to use tools or commands to generate 2 category files: .asm file and .byte file
@@ -17,6 +24,9 @@ The outputs of training phase are 5 models whose file format is .pickle
 
 The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), Pytorch, stack
 
+###Training steps:
+(1) Feature generate stage
+    Using .ipynb to generate a file which record the extracted features of binary files. First parameter should be filename(without extname) and 
 ## Testing phase
 Similarly, each binary executable needs to generate .asm file and .byte file at first.
 
@@ -24,7 +34,7 @@ Inputs are the same as training phase. That is, binary executable(PE), .asm file
 
 Output format: Dataframe
 
-## result showing
+## Result showing
 
 ### Experimental environment setting
 #### Operation System: Ubuntu 16.04 LTS Client (or at least Linux-based system recommended)
