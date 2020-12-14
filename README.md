@@ -6,6 +6,7 @@ Moreover, showing how we applied it to classify ransomware samples with our own 
 Authors: Owen Chen, Ping-Chung Chen, Chih-Wei Chen
 
 source category:
+
 (1) Source code of training and testing (/source_code)
 
 (2) Example samples for testing (/testsample)
@@ -26,27 +27,27 @@ Use feature extracting techniques: Select Hex code, Op Code, and Hex image to ex
 (1) Hex code
 
 Find features from Hex file, and use model to find relation between features and functions
-~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/hex_code_analysis.JPG)
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/hex_code_analysis.JPG)
 
 (2) OpCode
 
 Using IDA Pro to convert the .asm file of OpCode, then use keywords analysis to transfer Opcodes to Vector
-~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/opcode_analysis.JPG)
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/opcode_analysis.JPG)
 
 (3) Hex image
 
 Transfer Hex code into gray image, then use Fourier transform to describe better features of image
-~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/hex_code_analysis.JPG)
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/hex_code_analysis.JPG)
 
 ### Diagram of model
 
 Using stacking model to training and testing, then merging the results of different models to balance result
-~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/stack_model.JPG)
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/stack_model.JPG)
 
 ### Experimental result
 
 Accuracy > 50%
-~[](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/accuracy.JPG)
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/accuracy.JPG)
 
 ## Training phase
 First, each original binary executable in training set needs to use tools or commands to generate 2 category files: .asm file and .byte file
