@@ -1,5 +1,6 @@
 # AI_ransomware_classification
-record about the performance of our proposed AI model in ransomware classification and the other needed details
+Record about the performance of our proposed AI model in ransomware classification and the other needed details
+Authors: Owen Chen, Ping-Chung Chen
 
 ## Training phase
 First, each original binary executable in training set needs to use tools or commands to generate 2 category files: .asm file and .byte file
