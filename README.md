@@ -70,27 +70,27 @@ You can check by open example.ipynb and execute the first 4 cell to confirm that
 
 We manually classify the ransomware into 10 categories according to the names from Kaspersky in VirusTotal
 
-Category name                          amount
+Category name                                amount
 
-Trojan-Ransom.Win32.Blocker.xxx        1103
+Trojan-Ransom.Win32.Blocker.xxx               1103
 
-Trojan-Ransom.Win32.GandCrypt.xxx      911
+Trojan-Ransom.Win32.GandCrypt.xxx            911
 
-Trojan-Ransom.Win32.Foreign.xxx        317
+Trojan-Ransom.Win32.Foreign.xxx               317
 
-Trojan-Ransom.Win32.PornoBlocker.xxx   63
+Trojan-Ransom.Win32.PornoBlocker.xxx        63
 
-Trojan-Ransom.Win32.Wanna.xxx          163
+Trojan-Ransom.Win32.Wanna.xxx                    163
 
-HEUR:Trojan-Ransom.xxx.Blocker.gen     110
+HEUR:Trojan-Ransom.xxx.Blocker.gen            110
 
-HEUR:Trojan-Ransom.xxx.Gen.gen         14
+HEUR:Trojan-Ransom.xxx.Gen.gen                  14
 
-Trojan-Ransom.PHP.xxx                  1
+Trojan-Ransom.PHP.xxx                               1
 
-HEUR:Trojan-Ransom.Win32.xxx.vho       65
+HEUR:Trojan-Ransom.Win32.xxx.vho               65
 
-Others                                 4886  (72.3%)
+Others                                             4886  (72.3%)
 
  
 ## Usage
