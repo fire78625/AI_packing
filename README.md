@@ -48,7 +48,7 @@ Transfer Hex code into gray image, then use Fourier transform to describe better
 Using stacking model to training and testing, then merging the results of different models to balance result
 ![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/stack_model.JPG)
 
-### Experimental result
+### Classification result
 
 Accuracy > 50% in each category of malware
 ![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/accuracy.JPG)
