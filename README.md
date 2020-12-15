@@ -15,7 +15,7 @@ Source category:
 
 ## Introduction
 
-The original model attends the AI competition whose name is "2019 SecBuzzer AI UP! AI Information Security Challenge" which was hold by III
+The original model attends the AI competition whose name is "2019 SecBuzzer AI UP! AI Information Security Challenge" which was hold by III (Institute For Information Industry)
 https://competition.secbuzzer.co/
 
 The evaluation standard of competition is the accuracy of classification, and our model holds at least 50% accuracy to each category of malware
