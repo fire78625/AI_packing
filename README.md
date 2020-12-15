@@ -38,7 +38,7 @@ Using IDA Pro to convert the .asm file of OpCode, then use keywords analysis to 
 (3) Hex image
 
 Transfer Hex code into gray image, then use Fourier transform to describe better features of image
-![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/hex_code_image.JPG)
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/hex_image_analysis.JPG)
 
 ### Diagram of model
 
