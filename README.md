@@ -95,7 +95,7 @@ Others                                |       4886  (72.3%)
  
 ## Usage
 ### Training phase
-First, each original binary executable in training set needs to use tools or commands to generate 2 category files: .asm file and .byte file
+First, each original binary executable in training set needs to use tools (ex: IDA Pro) or commands (ex: xxd) to generate 2 category files: .asm file and .byte file
 
 Afterwards, the inputs of training phase are binary executable(PE), .asm file, and .byte file 
 
@@ -114,6 +114,11 @@ Using .ipynb to generate a file which record the extracted features of binary fi
 Using .py to generate a file which record the filename and its label. First parameter is filename, and second is label. [Input is binary executable, and output is a csv file]
 
 (3) Open model_training.ipynb and execute the cells (from 1st to 8th) by order then you can acquire the 5 output models in specific path that you have written. [Inputs are the 2 csv file, and the outputs are 5 models]
+
+### Training sample list
+
+We provide the md5 list of our training samples which download from VirusTotal in directory source_code
+
 ### Testing phase
 Similarly, each binary executable needs to generate .asm file and .byte file at first.
 
@@ -124,6 +129,8 @@ Output format: Dataframe
 #### Testing steps:
 
 Using .ipynb to generate testing result. [Inputs are binary executable, .asm file, and .byte file. Output is a dataframe]
+
+We provide 10 testing samples in directory testsample, including binary executable, assembly files(.asm) and byte file(.byte). 
 
 #### Testing result
 
