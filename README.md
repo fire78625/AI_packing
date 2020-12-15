@@ -125,7 +125,9 @@ Output format: Dataframe
 
 Using .ipynb to generate testing result. [Inputs are binary executable, .asm file, and .byte file. Output is a dataframe]
 
-## Result showing
+#### Testing result
+
+If you follow the testing steps, and you can acquire a response whose format is Dataframe. The visualization of response is displayed below.
 
 The left column list the names of category, the right column are the values of possibility of prediction. The largest value is the prediction result
 
