@@ -105,6 +105,9 @@ The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), 
 
 #### Training steps:
 
+If anaconda and others packages install completely, you can type "jupter notebook" command in command line.
+The next steps will process in jupter notebook.
+
 (1) Feature generate stage [File format: csv]
 
 Using .ipynb to generate a file which record the extracted features of binary files. First parameter of sample should be filename(without extname) and the others are the extracted features in order. [Inputs are binary executable, .asm file, and .byte file. Output is a csv file.]
@@ -130,7 +133,9 @@ Output format: Dataframe
 
 Using .ipynb to generate testing result. [Inputs are binary executable, .asm file, and .byte file. Output is a dataframe]
 
-We provide 10 testing samples in directory testsample, including binary executable, assembly files(.asm) and byte file(.byte). 
+### Testing sample
+
+We provide a zip file testsample.zip which contains 10 testing samples in directory testsample. 
 
 #### Testing result
 
