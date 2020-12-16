@@ -123,7 +123,7 @@ Using .py to generate a file which record the filename and its label. First para
 We provide the md5 list of our training samples which download from VirusTotal in directory source_code
 
 ### Testing phase
-Similarly, each binary executable needs to generate .asm file and .byte file at first.
+Similarly, each binary executable needs to generate .asm file (ex: IDA Pro) and .byte (ex: xxd) file at first.
 
 Inputs are the same as training phase. That is, binary executable(PE), .asm file, and .byte file
 
@@ -131,7 +131,9 @@ Output format: Dataframe
 
 #### Testing steps:
 
-Using .ipynb to generate testing result. [Inputs are binary executable, .asm file, and .byte file. Output is a dataframe]
+Using Example.ipynb to generate testing result. [Inputs are binary executable, .asm file, and .byte file. Output is a dataframe]
+
+You can execute each cell by order, but you have to modify the path of asm file and byte file in 3rd cell.Then you can acquire the result in 6th cell and print the result in 7th cell
 
 ### Testing sample
 
