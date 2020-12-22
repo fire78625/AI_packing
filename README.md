@@ -112,11 +112,19 @@ The next steps will process in jupter notebook.
 
 Using .ipynb to generate a file which record the extracted features of binary files. First parameter of sample should be filename(without extname) and the others are the extracted features in order. [Inputs are binary executable, .asm file, and .byte file. Output is a csv file.]
 
-Executing filterbyte.py to generate bytefile. Before executing, please modify the targetdir to your binary file save location and bytedir to the location you want to save bytefile.
+Executing filterbyte.py to generate bytefile. Before executing, please modify the targetdir to your binary file save location and bytedir to the location you want to save bytefile. [Notice it used Linux command xxd, so need to execute in Linux-based environment]
     
 (2) Label generate stage [File format: csv]
 
-Using filterbyte.py to generate a file which record the filename and its label. First parameter is filename, and second is label. [Input is binary executable, and output is a csv file]
+Using Samplelabel.py to generate a file which record the filename and its label. In this file, each sample whose first parameter is filename, and second is label. [Input is binary executable, and output is a csv file]
+
+!!! Need to modify the path in python file first
+
+1. modify VirusTotal report path (reportpath), report name(targetfile), and the save position of new label file directory (labelfilespath)
+
+2. modify label files save path in logfile variable
+
+3. modify path of open VirusTotal report
 
 (3) Open model_training.ipynb and execute the cells (from 1st to 5th) by order then you can acquire the 5 output models in specific path that you have written. [Inputs are the 2 csv file, and the outputs are 5 models]
 
