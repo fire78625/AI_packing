@@ -116,7 +116,15 @@ Using .ipynb to generate a file which record the extracted features of binary fi
 
 Using .py to generate a file which record the filename and its label. First parameter is filename, and second is label. [Input is binary executable, and output is a csv file]
 
-(3) Open model_training.ipynb and execute the cells (from 1st to 8th) by order then you can acquire the 5 output models in specific path that you have written. [Inputs are the 2 csv file, and the outputs are 5 models]
+(3) Open model_training.ipynb and execute the cells (from 1st to 5th) by order then you can acquire the 5 output models in specific path that you have written. [Inputs are the 2 csv file, and the outputs are 5 models]
+
+!!!Before execute the cells of model_training.ipynb, you need to modify some paths first.
+
+1. In second cell, you need to modify the path of csv files which record the features and the labels of training samples.
+
+2. In third cell, you need to modify the integer in each np.zeros() from the original integer 10 to the amount of your own classification.
+
+3. In fourth and fifth cell, the save path of generated models should be modify to location of your machine
 
 ### Training sample list
 
