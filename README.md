@@ -153,7 +153,7 @@ Similarly, each binary executable needs to generate .asm file (ex: IDA Pro) and 
 
 Inputs are the same as training phase. That is, binary executable(PE), .asm file, and .byte file
 
-Output format: Dataframe
+Output format: ndarray
 
 #### Testing steps:
 
