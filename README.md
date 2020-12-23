@@ -94,6 +94,9 @@ Others                                |       4886  (72.3%)
 
  
 ## Usage
+
+Extract souce code from the zip file 'ML_model.zip' first 
+
 ### Training phase
 First, each original binary executable in training set needs to use tools (ex: IDA Pro) or commands (ex: xxd) to generate 2 category files: .asm file and .byte file
 
@@ -171,7 +174,7 @@ If you follow the testing steps, and you can acquire a response whose format is 
 
 The left column list the names of category, the right column are the values of possibility of prediction. The largest value is the prediction result
 
-![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_single.png)
+![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_single.jpg)
 
 ## Future works
 
