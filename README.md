@@ -110,7 +110,15 @@ The next steps will process in jupter notebook.
 
 (1) Feature generate stage [File format: csv]
 
-Using .ipynb to generate a file which record the extracted features of binary files. First parameter of sample should be filename(without extname) and the others are the extracted features in order. [Inputs are binary executable, .asm file, and .byte file. Output is a csv file.]
+Using extract_feature.ipynb to generate a file which record the extracted features of binary files (1st ~ 6th cell). First parameter of sample should be filename(without extname) and the others are the extracted features in order [Needed inputs are binary executable, .asm file, and .byte file. Output is a csv file]
+
+!!! However, you need to modify several paths first
+
+1. In 2nd cell, you have to modify the paths of your binary files, asm files, and byte files directory
+
+2. In 5th cell, you have to modify the errormsg saving path and its filename [There are 2 error msg file, one records error in predict function, the other is the generate features amount does not match what we want.]
+
+3. In 6th cell, you need to modify the output file [features file] location
 
 Executing filterbyte.py to generate bytefile. Before executing, please modify the targetdir to your binary file save location and bytedir to the location you want to save bytefile. [Notice it used Linux command xxd, so need to execute in Linux-based environment]
     
@@ -151,7 +159,7 @@ Output format: Dataframe
 
 Using Example.ipynb to generate testing result. [Inputs are binary executable, .asm file, and .byte file. Output is a dataframe]
 
-You can execute each cell by order, but you have to modify the path of asm file and byte file in 3rd cell.Then you can acquire the result in 6th cell and print the result in 7th cell
+You can execute each cell by order [1st to 6th cell], but you have to modify the path of asm file and byte file in 2nd cell.Then you can acquire the result in 5th cell and print the result in 6th cell
 
 ### Testing sample
 
