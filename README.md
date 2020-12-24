@@ -160,7 +160,9 @@ Output format: ndarray
 
 #### Testing steps:
 
-Execute the command: python3 Example.py <bytesfile_path> <asmfile_path> [output is a ndarray]
+Execute the following command: [output is a ndarray]
+
+python3 Example.py <bytesfile_path> <asmfile_path> 
 
 ### Testing sample
 
