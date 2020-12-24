@@ -3,10 +3,9 @@ import subprocess
 import sys
 
 def main():
-    #date = str(sys.argv[1])
-    targetdir = "/home/maluser/Desktop/ent_unpacked/"                    # binary file save location
+    targetdir = "bin/"                                                   # binary file save location
     samplelist = os.listdir(targetdir)
-    bytedir = "/home/maluser/Desktop/unpackbyte/"                        # save location of new converted byte file
+    bytedir = "byte/"                                                    # save location of new converted byte file
     xxdcmd = "xxd -c 16 -g 1 "
     if not os.path.isdir(bytedir):                                       # check save location dir exist
         subprocess.check_output("mkdir "+bytedir,shell=True)
@@ -15,14 +14,14 @@ def main():
         existfilelist[rawindex] = existfilelist[rawindex].split(".")[0]
     count = 0
     for name in samplelist:
-        orifilename = name.split(".")[0]
+        orifilename = name.split(".")[0]                                 # name = xxx.<extname>, orifilename = xxx
         existflag = 0
         for existname in existfilelist:                                  # if there are multiple diretory, check file in new directory exist in old directory or not
             if existname == orifilename:
                 existflag = 1
-        if existflag == 0:
+        if existflag == 0:                                               # if file has already converted, it will not convert again
             if os.path.isfile(targetdir+name):
-                outfile = open(bytedir+orifilename+".byte",'a',encoding='UTF-8')
+                outfile = open(bytedir+orifilename+".byte",'a',encoding='UTF-8')  # bytefile name = xxx.byte
                 cmdresult = str(subprocess.check_output(xxdcmd+targetdir+name, shell=True)).split("\\n")
                 for index in range(0,len(cmdresult)-1):
                     retstr = ""
