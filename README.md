@@ -176,8 +176,3 @@ The left column list the names of category, the right column are the values of p
 
 ![](https://github.com/fire78625/AI_ransomware_classification/blob/main/result_showing/ai_single.jpg)
 
-## Future works
-
-(1) We try to apply model to the classification of ransomware
-
-(2) The ransomware samples collected from VirusTotal are unbanlanced (in our definition) so that the performance of model is worse. We try to improve this situation 
