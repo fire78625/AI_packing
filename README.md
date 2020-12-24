@@ -112,7 +112,7 @@ python3 filterbyte.py
 
 [Notice it used Linux command xxd, so need to execute in Linux-based environment]
 
-Afterwards, the needed inputs of training phase are binary executable(PE), .asm file, and .byte file [Notice that we assume your binary filename is like <xxx>.<extname>]
+Afterwards, the needed inputs of training phase are binary executable(PE), .asm file, and .byte file [Notice that we assume your binary filename is like xxx.extname]
 
 The outputs of training phase are 5 models whose file format is .pickle
 
@@ -132,11 +132,9 @@ python3 extract_feature.py
 
 !!! Notice there are two possible error files in 'errordir' directory
 
-One of their name is err_VT_train_bytelist, it record the error msg during training process. The error in this process often occurs in bytefile
+One of their name is err_VT_train_bytelist, it record the error msg during training process. 
 
-The other name is err_VT_training_feature, it record the error filename. This error occurs because the extracted features amount does not match the number we assumed. And this will cause the dimension problem when training. Thus, we abandon these files.
-
-
+The other name is err_VT_training_feature, it record the error filename. 
     
 (2) Label generate stage [record format: csv]
 
