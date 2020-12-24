@@ -108,7 +108,7 @@ Please put your binary executable in 'bin' directory
 
 #### Executing the following command to generate bytefile [output byte file is in 'byte' directory]
 
-python3 filterbyte.py 
+*python3 filterbyte.py* 
 
 -----------------------------------------------------------------------------------------------------
 
@@ -130,7 +130,7 @@ If you want to change the target directory, please modify corresponding code par
 
 #### Executing the following command to generate features file: 
 
-python3 extract_feature.py
+*python3 extract_feature.py*
 
 --------------------------------------------------------------------------------
 
@@ -144,7 +144,7 @@ The other name is err_VT_training_feature, it record the error filename.
 
 ##### Execute the following command to generate label file: [only extract the label of Ransomware, input parameter is the Virustotal report name and its format should be a json file]
 
-python3 Samplelabel.py <VirusTotal_report_name>
+*python3 Samplelabel.py <VirusTotal_report_name>*
 
 ----------------------------------------------------------------------------
 
@@ -154,7 +154,7 @@ output is located on 'label' directory and filename = <yourreportname>_label_rec
 
 ##### Execute the following command to training model: [outputs are 5 models in the directory 'model']
 
-python3 model_training.py <features_file_name> <label_file_name> <amount of your category>
+*python3 model_training.py <features_file_name> <label_file_name> <amount of your category>*
  
 ----------------------------------------------------------------------------------------------
 
@@ -173,7 +173,7 @@ Output format: ndarray
 
 ##### Execute the following command to testing single sample: [output is a ndarray]
 
-python3 Example.py <bytesfile_path> <asmfile_path> 
+*python3 Example.py <bytesfile_path> <asmfile_path>*
 
 ### Testing sample
 
