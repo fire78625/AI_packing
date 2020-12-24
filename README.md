@@ -95,7 +95,7 @@ Others                                |       4886  (72.3%)
  
 ## Usage
 
-Extract souce code from the zip file 'ML_model.zip' first 
+Extract souce code from the zip file 'ML_model.zip' first, and pull the other python file in source_code directory
 
 ### Training phase
 First, each original binary executable in training set needs to use tools (ex: IDA Pro) or commands (ex: xxd) to generate 2 category files: .asm file and .byte file
