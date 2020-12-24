@@ -109,6 +109,7 @@ Please put your binary executable in 'bin' directory
 #### Executing the following command to generate bytefile [output byte file is in 'byte' directory]
 
 *`python3 filterbyte.py`*
+
 -----------------------------------------------------------------------------------------------------
 
 [Notice it used Linux command xxd, so need to execute in Linux-based environment]
