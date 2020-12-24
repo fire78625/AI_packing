@@ -118,7 +118,7 @@ If you want to change the target directory, please modify corresponding code par
 
 Using extract_feature.ipynb to generate a file which record the extracted features of binary files (1st ~ 6th cell). First parameter of sample should be filename(without extname) and the others are the extracted features in order [Needed inputs are binary executable, .asm file, and .byte file. Output is a csv file]
 
-Executing the following command: []
+##### Executing the following command: []
 
 python3 extract_feature.py
 
@@ -132,7 +132,7 @@ The other name is err_VT_training_feature, it record the error filename. This er
     
 (2) Label generate stage [record format: csv]
 
-Execute the following command: [only extract the label of Ransomware, input parameter is the Virustotal report name and its format should be a json file]
+##### Execute the following command: [only extract the label of Ransomware, input parameter is the Virustotal report name and its format should be a json file]
 
 python3 Samplelabel.py <VirusTotal_report_name>
 
@@ -140,7 +140,7 @@ output is located on 'label' directory and filename = <yourreportname>_label_rec
 
 (3) Training model
 
-Execute the following command: [outputs are 5 models in the directory 'model']
+##### Execute the following command: [outputs are 5 models in the directory 'model']
 
 python3 model_training.py <features_file_name> <label_file_name> <amount of your category>
 
@@ -157,7 +157,7 @@ Output format: ndarray
 
 #### Testing steps:
 
-Execute the following command: [output is a ndarray]
+##### Execute the following command: [output is a ndarray]
 
 python3 Example.py <bytesfile_path> <asmfile_path> 
 
