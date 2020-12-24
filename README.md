@@ -110,6 +110,8 @@ Please put your binary executable in 'bin' directory
 
 python3 filterbyte.py 
 
+-----------------------------------------------------------------------------------------------------
+
 [Notice it used Linux command xxd, so need to execute in Linux-based environment]
 
 Afterwards, the needed inputs of training phase are binary executable(PE), .asm file, and .byte file [Notice that we assume your binary filename is like xxx.extname]
@@ -130,6 +132,8 @@ If you want to change the target directory, please modify corresponding code par
 
 python3 extract_feature.py
 
+--------------------------------------------------------------------------------
+
 !!! Notice there are two possible error files in 'errordir' directory
 
 One of their name is err_VT_train_bytelist, it record the error msg during training process. 
@@ -142,6 +146,8 @@ The other name is err_VT_training_feature, it record the error filename.
 
 python3 Samplelabel.py <VirusTotal_report_name>
 
+----------------------------------------------------------------------------
+
 output is located on 'label' directory and filename = <yourreportname>_label_record.txt
 
 (3) Training model
@@ -149,6 +155,8 @@ output is located on 'label' directory and filename = <yourreportname>_label_rec
 ##### Execute the following command to training model: [outputs are 5 models in the directory 'model']
 
 python3 model_training.py <features_file_name> <label_file_name> <amount of your category>
+ 
+----------------------------------------------------------------------------------------------
 
 ### Training sample list
 
