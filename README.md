@@ -108,8 +108,12 @@ The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), 
 
 #### Training steps:
 
-If anaconda and others packages install completely, you can type "jupter notebook" command in command line.
+If anaconda and others packages install completely, you can type "jupyter notebook" command in command line.
 The next steps will process in jupter notebook.
+
+Notice we set default asm files in 'asm' directory, byte files in 'byte' directory, and binary files in 'bin' directory
+
+If you want to change the target directory, please modify corresponding code parameters
 
 (1) Feature generate stage [File format: csv]
 
@@ -137,15 +141,11 @@ Using Samplelabel.py to generate a file which record the filename and its label.
 
 3. modify path of open VirusTotal report
 
-(3) Open model_training.ipynb and execute the cells (from 1st to 5th) by order then you can acquire the 5 output models in specific path that you have written. [Inputs are the 2 csv file, and the outputs are 5 models]
+(3) Training model
 
-!!!Before execute the cells of model_training.ipynb, you need to modify some paths first.
+Execute the following command: [outputs are 5 models in the directory 'model']
 
-1. In second cell, you need to modify the path of csv files which record the features and the labels of training samples.
-
-2. In third cell, you need to modify the integer in each np.zeros() from the original integer 10 to the amount of your own classification.
-
-3. In fourth and fifth cell, the save path of generated models should be modify to location of your machine
+python3 model_training.py <features_file_name> <label_file_name> <amount of your category>
 
 ### Training sample list
 
