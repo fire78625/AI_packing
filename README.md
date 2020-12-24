@@ -100,7 +100,9 @@ Extract souce code from the zip file 'ML_model.zip' first
 ### Training phase
 First, each original binary executable in training set needs to use tools (ex: IDA Pro) or commands (ex: xxd) to generate 2 category files: .asm file and .byte file
 
-Afterwards, the inputs of training phase are binary executable(PE), .asm file, and .byte file 
+Executing filterbyte.py to generate bytefile. Before executing, please modify the targetdir to your binary file save location and bytedir to the location you want to save bytefile. [Notice it used Linux command xxd, so need to execute in Linux-based environment]
+
+Afterwards, the needed inputs of training phase are binary executable(PE), .asm file, and .byte file [Notice that we assume your binary filename is like <xxx>.<extname>]
 
 The outputs of training phase are 5 models whose file format is .pickle
 
@@ -108,38 +110,33 @@ The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), 
 
 #### Training steps:
 
-If anaconda and others packages install completely, you can type "jupyter notebook" command in command line.
-The next steps will process in jupter notebook.
-
 Notice we set default asm files in 'asm' directory, byte files in 'byte' directory, and binary files in 'bin' directory
 
-If you want to change the target directory, please modify corresponding code parameters
+If you want to change the target directory, please modify corresponding code parameters. Otherwise, please put the files to their corresponding directory
 
-(1) Feature generate stage [File format: csv]
+(1) Feature generate stage [data format: csv]
 
 Using extract_feature.ipynb to generate a file which record the extracted features of binary files (1st ~ 6th cell). First parameter of sample should be filename(without extname) and the others are the extracted features in order [Needed inputs are binary executable, .asm file, and .byte file. Output is a csv file]
 
-!!! However, you need to modify several paths first
+Executing the following command: []
 
-1. In 2nd cell, you have to modify the paths of your binary files, asm files, and byte files directory
+python3 extract_feature.py
 
-2. In 5th cell, you have to modify the errormsg saving path and its filename [There are 2 error msg file, one records error in predict function, the other is the generate features amount does not match what we want.]
+!!! Notice there are two possible error files in 'errordir' directory
 
-3. In 6th cell, you need to modify the output file [features file] location
+One of their name is err_VT_train_bytelist, it record the error msg during training process. The error in this process often occurs in bytefile
 
-Executing filterbyte.py to generate bytefile. Before executing, please modify the targetdir to your binary file save location and bytedir to the location you want to save bytefile. [Notice it used Linux command xxd, so need to execute in Linux-based environment]
+The other name is err_VT_training_feature, it record the error filename. This error occurs because the extracted features amount does not match the number we assumed. And this will cause the dimension problem when training. Thus, we abandon these files.
+
+
     
-(2) Label generate stage [File format: csv]
+(2) Label generate stage [record format: csv]
 
-Using Samplelabel.py to generate a file which record the filename and its label. In this file, each sample whose first parameter is filename, and second is label. [Input is binary executable, and output is a csv file]
+Execute the following command: [only extract the label of Ransomware, input parameter is the Virustotal report name and its format should be a json file]
 
-!!! Need to modify the path in python file first
+python3 Samplelabel.py <VirusTotal_report_name>
 
-1. modify VirusTotal report path (reportpath), report name(targetfile), and the save position of new label file directory (labelfilespath)
-
-2. modify label files save path in logfile variable
-
-3. modify path of open VirusTotal report
+output is located on 'label' directory and filename = <yourreportname>_label_record.txt
 
 (3) Training model
 
