@@ -5,17 +5,18 @@ import os
 
 def main():
     # basic setting
-    #date = str(sys.argv[1])
-    reportpath = "/home/maluser/maldataset/crawler/"                 # path of virustotal reports
-    targetfile = date+"_raw_2.json"                                  # VirusTotal reports saving name | one json contains multiple files report (at least 300)
-    labelfilespath = "/home/maluser/Desktop/samplelogs/"             # prepared label saving position
+    VTreport = str(sys.argv[1])            # VirusTotal reports saving name	
+    reportpath = "report/"                 # path of virustotal reports
+	if os.path.isfile(reportpath+VTreport):
+        targetfile = reportpath+VTreport   # Complete VirusTotal reports path | one json contains multiple files report (at least 300 files report)
+    labelfilespath = "label/"              # prepared label saving position
     
     # counter for testing
     totalcount = 0
     
-    logfile = open(labelfilespath+"_record.txt",'a',encoding='UTF-8')             # open file to log file label
+    logfile = open(labelfilespath+VTreport+"_label_record.txt",'a',encoding='UTF-8')             # open file to log file label
     # filter name from json report
-    with open(reportpath+targetfile,'r',encoding="UTF-8") as file:   # open VirusTotal report (json format)
+    with open(targetfile,'r',encoding="UTF-8") as file:   # open VirusTotal report (json format)
         content = json.load(file)
     for intend in range(0,len(content['data'])):
         hashname = content['data'][intend]['id']
