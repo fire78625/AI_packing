@@ -120,13 +120,11 @@ The categories of output model: Random Forest(RF), XGBoost(XGB), LightGBM(LGB), 
 
 #### Training steps:
 
-Notice we set default asm files in 'asm' directory, byte files in 'byte' directory, and binary files in 'bin' directory
+Notice to put your asm files in 'asm' directory, byte files in 'byte' directory, and binary files in 'bin' directory
 
 If you want to change the target directory, please modify corresponding code parameters. Otherwise, please put the files to their corresponding directory
 
 (1) Feature generate stage [data format: csv]
-
-Using extract_feature.ipynb to generate a file which record the extracted features of binary files (1st ~ 6th cell). First parameter of sample should be filename(without extname) and the others are the extracted features in order [Needed inputs are binary executable, .asm file, and .byte file. Output is a csv file]
 
 #### Executing the following command to generate features file: 
 
