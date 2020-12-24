@@ -160,9 +160,7 @@ Output format: ndarray
 
 #### Testing steps:
 
-Using Example.ipynb to generate testing result. [Inputs are binary executable, .asm file, and .byte file. Output is a dataframe]
-
-You can execute each cell by order [1st to 6th cell], but you have to modify the path of asm file and byte file in 2nd cell.Then you can acquire the result in 5th cell and print the result in 6th cell
+Execute the command: python3 Example.py <bytesfile_path> <asmfile_path> [output is a ndarray]
 
 ### Testing sample
 
